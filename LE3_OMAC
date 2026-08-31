@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    char name[100];
+    char section[50];
+    float num1, num2;
+
+    printf("Enter Complete Name: ");
+    fgets(name, sizeof(name), stdin);
+
+    printf("Enter Section: ");
+    fgets(section, sizeof(section), stdin);
+
+    printf("\nEnter first number: ");
+    scanf("%f", &num1);
+
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+
+    printf("\nStudent Calculator\n");
+    printf("Student name: %s", name);
+    printf("Section: %s", section);
+
+    printf("Results:\n");
+    printf("%.0f + %.0f = %.0f\n", num1, num2, num1 + num2);
+    printf("%.0f - %.0f = %.0f\n", num1, num2, num1 - num2);
+    printf("%.0f * %.0f = %.0f\n", num1, num2, num1 * num2);
+
+    if (num2 != 0) {
+        printf("%.0f / %.0f = %.2f\n", num1, num2, num1 / num2);
+    } else {
+        printf("Cannot divide by zero.\n");
+    }
+
+    return 0;
+}
+
+Enter first number: 3
+Enter second number: 10
+
+Student Calculator
+Student name: Aijane E. Omac
+Section: BSIT-1R13 
+Results:
+3 + 10 = 13
+3 - 10 = -7
+3 * 10 = 30
+3 / 10 = 0.30
