@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+
     char name[100];
     char section[50];
     float num1, num2;
@@ -18,10 +19,12 @@ int main() {
     scanf("%f", &num2);
 
     printf("\nStudent Calculator\n");
+
     printf("Student name: %s", name);
     printf("Section: %s", section);
 
     printf("Results:\n");
+
     printf("%.0f + %.0f = %.0f\n", num1, num2, num1 + num2);
     printf("%.0f - %.0f = %.0f\n", num1, num2, num1 - num2);
     printf("%.0f * %.0f = %.0f\n", num1, num2, num1 * num2);
@@ -35,14 +38,20 @@ int main() {
     return 0;
 }
 
-Enter first number: 3
-Enter second number: 10
+Enter Complete Name: Aijane E. Omac
+Enter Section: BSIT-1R13 
+
+Enter first number: 10
+Enter second number: 3
 
 Student Calculator
 Student name: Aijane E. Omac
 Section: BSIT-1R13 
 Results:
-3 + 10 = 13
-3 - 10 = -7
-3 * 10 = 30
-3 / 10 = 0.30
+10 + 3 = 13
+10 - 3 = 7
+10 * 3 = 30
+10 / 3 = 3.33
+
+
+...Program finished with exit code 0
