@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main() {
+    char name[100];
+    char section[50];
+    float q1, q2, q3, q4, average;
+
+
+    printf("Enter Complete Name: ");
+    scanf(" %[^\n]s", name);
+    printf("Enter Section : ");
+    scanf(" %[^\n]s", section);
+    printf("\n");
+
+ 
+    printf("Enter 1st Quarter Grade: ");
+    scanf("%f", &q1);
+    printf("Enter 2nd Quarter Grade: ");
+    scanf("%f", &q2);
+    printf("Enter 3rd Quarter Grade: ");
+    scanf("%f", &q3);
+    printf("Enter 4th Quarter Grade: ");
+    scanf("%f", &q4);
+    printf("\n");
+
+
+    average = (q1 + q2 + q3 + q4) / 4.0;
+
+   
+    printf("Student: %s\n", name);
+    printf("Section: %s\n", section);
+    printf("General Average: %.2f\n", average);
+
+    
+    if (average >= 90.0 && average <= 100.0) {
+        printf("Remarks: Outstanding\n");
+    } else if (average >= 85.0) {
+        printf("Remarks: Very Satisfactory\n");
+    } else if (average >= 80.0) {
+        printf("Remarks: Satisfactory\n");
+    } else if (average >= 75.0) {
+        printf("Remarks: Fair\n");
+    } else {
+        printf("Remarks: Failed\n");
+    }
+
+    return 0;
+}
+
+Enter Complete Name: Aijane E. Omac
+Enter Section : BSIT-1R13 
+
+Enter 1st Quarter Grade: 95
+Enter 2nd Quarter Grade: 94
+Enter 3rd Quarter Grade: 93
+Enter 4th Quarter Grade: 92
+
+Student: Aijane E. Omac
+Section: BSIT-1R13 
+General Average: 93.50
+Remarks: Outstanding
+
+
+...Program finished with exit code 0
