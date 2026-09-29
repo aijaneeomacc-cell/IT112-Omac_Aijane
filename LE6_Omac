@@ -1,150 +1,172 @@
 #include <stdio.h>
-
-// Function declarations
-float add(float a, float b);
-float subtract(float a, float b);
-float multiply(float a, float b);
-float divide(float a, float b);
-
-int main() {
-    float num1, num2, result;
-    int choice;
-
+ 
+/* ---- Function prototypes ---- */
+int addition(int a, int b);
+int subtraction(int a, int b);
+int multiplication(int a, int b);
+float division(int a, int b);
+ 
+int main(void) {
+    int num1, num2, choice;
+    int result;
+    float divResult;
+ 
     do {
-        printf("\n===== ARITHMETIC CALCULATOR =====\n");
-        printf("1. Addition\n");
-        printf("2. Subtraction\n");
-        printf("3. Multiplication\n");
-        printf("4. Division\n");
-        printf("5. Exit Program\n");
-        printf("=================================\n");
-
-        printf("Enter your choice: ");
+        printf("Multiple functions to perform Arithmetic Operations\n\n");
+ 
+        printf("Enter first number: ");
+        scanf("%d", &num1);
+        printf("Enter second number: ");
+        scanf("%d", &num2);
+ 
+        printf("\nChoose Operation:\n");
+        printf("[1] Addition\n");
+        printf("[2] Subtraction\n");
+        printf("[3] Multiplication\n");
+        printf("[4] Division\n");
+        printf("[5] Exit Program\n\n");
+        printf("Enter choice [1-5]: ");
         scanf("%d", &choice);
-
-        if (choice >= 1 && choice <= 4) {
-            printf("Enter first number: ");
-            scanf("%f", &num1);
-
-            printf("Enter second number: ");
-            scanf("%f", &num2);
-        }
-
+        printf("\n");
+ 
         switch (choice) {
             case 1:
-                result = add(num1, num2);
-                printf("Result: %.2f + %.2f = %.2f\n", num1, num2, result);
+                result = addition(num1, num2);
+                printf("%d + %d = %d\n\n", num1, num2, result);
                 break;
-
+ 
             case 2:
-                result = subtract(num1, num2);
-                printf("Result: %.2f - %.2f = %.2f\n", num1, num2, result);
+                result = subtraction(num1, num2);
+                printf("%d - %d = %d\n\n", num1, num2, result);
                 break;
-
+ 
             case 3:
-                result = multiply(num1, num2);
-                printf("Result: %.2f * %.2f = %.2f\n", num1, num2, result);
+                result = multiplication(num1, num2);
+                printf("%d * %d = %d\n\n", num1, num2, result);
                 break;
-
+ 
             case 4:
                 if (num2 == 0) {
-                    printf("Error: Division by zero is not allowed.\n");
+                    printf("Error: Division by zero is not allowed.\n\n");
                 } else {
-                    result = divide(num1, num2);
-                    printf("Result: %.2f / %.2f = %.2f\n", num1, num2, result);
+                    divResult = division(num1, num2);
+                    printf("%d / %d = %.2f\n\n", num1, num2, divResult);
                 }
                 break;
-
+ 
             case 5:
-                printf("Exiting the program...\n");
+                printf("Exiting program...\n");
                 break;
-
+ 
             default:
-                printf("Invalid choice. Please choose 1 to 5.\n");
+                printf("Invalid choice. Please enter a number from 1 to 5.\n\n");
         }
-
+ 
     } while (choice != 5);
-
+ 
     return 0;
 }
-
-// Addition function
-float add(float a, float b) {
+ 
+/* ---- Function definitions ---- */
+int addition(int a, int b) {
     return a + b;
 }
-
-// Subtraction function
-float subtract(float a, float b) {
+ 
+int subtraction(int a, int b) {
     return a - b;
 }
-
-// Multiplication function
-float multiply(float a, float b) {
+ 
+int multiplication(int a, int b) {
     return a * b;
 }
-
-// Division function
-float divide(float a, float b) {
-    return a / b;
+ 
+float division(int a, int b) {
+    return (float)a / (float)b;
 }
 
-===== ARITHMETIC CALCULATOR =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit Program
-=================================
-Enter your choice: 1
+
+
+
+Multiple functions to perform Arithmetic Operations
+
 Enter first number: 10
 Enter second number: 3
-Result: 10.00 + 3.00 = 13.00
 
-===== ARITHMETIC CALCULATOR =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit Program
-=================================
-Enter your choice: 2
+Choose Operation:
+[1] Addition
+[2] Subtraction
+[3] Multiplication
+[4] Division
+[5] Exit Program
+
+Enter choice [1-5]: 1
+
+10 + 3 = 13
+
+Multiple functions to perform Arithmetic Operations
+
 Enter first number: 10
 Enter second number: 3
-Result: 10.00 - 3.00 = 7.00
 
-===== ARITHMETIC CALCULATOR =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit Program
-=================================
-Enter your choice: 3
+Choose Operation:
+[1] Addition
+[2] Subtraction
+[3] Multiplication
+[4] Division
+[5] Exit Program
+
+Enter choice [1-5]: 2
+
+10 - 3 = 7
+
+Multiple functions to perform Arithmetic Operations
+
 Enter first number: 10
 Enter second number: 3
-Result: 10.00 * 3.00 = 30.00
 
-===== ARITHMETIC CALCULATOR =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit Program
-=================================
-Enter your choice: 4
+Choose Operation:
+[1] Addition
+[2] Subtraction
+[3] Multiplication
+[4] Division
+[5] Exit Program
+
+Enter choice [1-5]: 3
+
+10 * 3 = 30
+
+Multiple functions to perform Arithmetic Operations
+
 Enter first number: 10
 Enter second number: 3
-Result: 10.00 / 3.00 = 3.33
 
-===== ARITHMETIC CALCULATOR =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit Program
-=================================
-Enter your choice: 5
-Exiting the program...
+Choose Operation:
+[1] Addition
+[2] Subtraction
+[3] Multiplication
+[4] Division
+[5] Exit Program
+
+Enter choice [1-5]: 4
+
+10 / 3 = 3.33
+
+Multiple functions to perform Arithmetic Operations
+
+Enter first number: 10
+Enter second number: 3
+
+Choose Operation:
+[1] Addition
+[2] Subtraction
+[3] Multiplication
+[4] Division
+[5] Exit Program
+
+Enter choice [1-5]: 5
+
+Exiting program...
 
 
 ...Program finished with exit code 0
+Press ENTER to exit console.
